@@ -25,9 +25,12 @@ const Routes = () => {
             screenOptions={{
                 headerShown: false
             }}
+            initialRouteName=''
         >
-            <Stack.Screen name="Liked" component={LikedSongScreen} />
             <Stack.Screen name="Login" component={LoginScreen} />
+            <Stack.Screen name="Home" component={HomeScreen} />
+            <Stack.Screen name='Main' component={BottomTabs} />
+            <Stack.Screen name="Liked" component={LikedSongScreen} />
             <Stack.Screen name="SongInfo" component={SongInfoScreen} />
         </Stack.Navigator>
 

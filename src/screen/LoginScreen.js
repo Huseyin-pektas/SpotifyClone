@@ -4,10 +4,13 @@ import LinearGradient from 'react-native-linear-gradient'
 import Entypo from "react-native-vector-icons/Entypo"
 import MaterialIcons from "react-native-vector-icons/MaterialIcons"
 import AntDesign from "react-native-vector-icons/AntDesign"
+import { useNavigation } from '@react-navigation/native'
 
 const LoginScreen = () => {
+    const navigation = useNavigation()
     return (
-        <LinearGradient colors={["#040306", "#131624"]} style={{ flex: 1 }}>
+        <LinearGradient
+            colors={["#040306", "#131624"]} style={{ flex: 1 }}>
             <SafeAreaView>
 
                 <View style={{ color: "white", height: 60 }} />
@@ -16,7 +19,8 @@ const LoginScreen = () => {
 
                 <View style={{ color: "white", height: 60 }} />
 
-                <Pressable style={styles.LoginButton}>
+                <Pressable onPress={() => navigation.navigate("Home")}
+                    style={styles.LoginButton}>
                     <Text style={styles.LoginText}>Sign In with Spotify</Text>
                 </Pressable>
                 <Pressable style={styles.LoginButtonPhone}>
